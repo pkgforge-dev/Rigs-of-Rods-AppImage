@@ -16,7 +16,7 @@ export DEPLOY_OPENGL=1
 
 # Deploy dependencies
 quick-sharun ./AppDir/bin/RoR /usr/lib/Plugin*.so* /usr/lib/Render*.so* /usr/lib/libMyGUI*.so* /usr/lib/libOgre*.so* /usr/lib/Codec*.so*
-echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
+#echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
 
