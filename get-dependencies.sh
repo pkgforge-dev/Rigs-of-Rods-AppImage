@@ -21,5 +21,6 @@ echo "---------------------------------------------------------------"
 itchio-downloader --url "https://rigs-of-rods.itch.io/rigs-of-rods" --platform linux --downloadDirectory .
 mkdir -p ./AppDir/bin
 tar -xvf game-2066563.zip
+rm -f *.zip
 mv -v RoR plugins.cfg resources languages content ./AppDir/bin
 mv -v lib/* /usr/lib
