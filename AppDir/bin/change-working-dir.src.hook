@@ -1,5 +1,5 @@
 #!/bin/false
-dir=${XDG_DATA_HOME:-~/.rigsofrods
+dir=$HOME/.rigsofrods
 mkdir -p "$dir"
 if [ ! -f "$dir"/plugins.cfg ]; then
 cd "$dir"
