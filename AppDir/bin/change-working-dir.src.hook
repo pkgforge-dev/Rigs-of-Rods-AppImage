@@ -11,10 +11,8 @@ PluginFolder="$APPDIR"/bin/lib
 
 # Define plugins
 Plugin=Codec_FreeImage
-# Plugin=RenderSystem_Direct3D9
-# Plugin=RenderSystem_Direct3D11
-Plugin=RenderSystem_GL
-# Plugin=RenderSystem_GL3Plus
+# Plugin=RenderSystem_GL
+Plugin=RenderSystem_GL3Plus
 Plugin=Plugin_ParticleFX
 Plugin=Plugin_OctreeSceneManager
 Plugin=Plugin_CgProgramManager
