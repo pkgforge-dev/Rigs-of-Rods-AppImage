@@ -8,7 +8,8 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     libxaw \
-    openal
+    openal \
+    patchelf
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
@@ -20,11 +21,13 @@ make-aur-package itchio-downloader
 # If the application needs to be manually built that has to be done down here
 echo "Getting app..."
 echo "---------------------------------------------------------------"
-itchio-downloader --url "https://rigs-of-rods.itch.io/rigs-of-rods" --platform linux --downloadDirectory .
 mkdir -p ./AppDir/bin
-bsdtar -xvf game-2066563.zip
-rm -f *.zip
-sed -i "s#PluginFolder=lib#PluginFolder=\"\$APPDIR\"/shared/lib#" plugins.cfg
-mv -v RoR plugins.cfg resources languages content ./AppDir/bin
-#cp -r lib ./AppDir/bin
-mv -v lib/* /usr/lib
+cd ./AppDir/bin
+itchio-downloader --url "https://rigs-of-rods.itch.io/rigs-of-rods" --platform linux --downloadDirectory .
+bsdtar -xvf ./game-2066563.zip
+patchelf --set-rpath '$ORIGIN/lib' ./RoR
+patchelf --set-rpath '$ORIGIN' ./lib/*.so*
+rm -f ./*.zip ./RunRoR
+
+# TODO find a way to set version automatically
+echo '2026.01' > ~/version
