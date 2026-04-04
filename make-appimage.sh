@@ -12,8 +12,8 @@ export ICON=https://raw.githubusercontent.com/RigsOfRods/rigs-of-rods/refs/heads
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-#quick-sharun ./AppDir/bin/RoR /usr/lib/Plugin*.so* /usr/lib/Render*.so* /usr/lib/libMyGUI*.so* /usr/lib/libOgre*.so* /usr/lib/Codec*.so* /usr/lib/fips.so /usr/lib/legacy.so
-quick-sharun ./AppDir/bin/RunRoR ./AppDir/bin/RoR
+quick-sharun ./AppDir/bin/RunRoR ./AppDir/bin/RoR /usr/lib/Plugin*.so* /usr/lib/Render*.so* /usr/lib/libMyGUI*.so* /usr/lib/libOgre*.so* /usr/lib/Codec*.so* /usr/lib/fips.so /usr/lib/legacy.so
+#quick-sharun ./AppDir/bin/RunRoR ./AppDir/bin/RoR
 ln -sf ./AppDir/shared/lib ./AppDir/bin/lib
 #echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
