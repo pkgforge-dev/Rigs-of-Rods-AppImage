@@ -28,3 +28,6 @@ bsdtar -xvf ./game-2066563.zip
 patchelf --set-rpath '$ORIGIN/lib' ./RoR
 patchelf --set-rpath '$ORIGIN' ./lib/*.so*
 rm -f ./*.zip ./RunRoR
+
+# TODO find a way to set version automatically
+echo '2026.01' > ~/version
