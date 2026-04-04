@@ -1,4 +1,5 @@
 #!/bin/false
 dir=$HOME/.rigsofrods
 mkdir -p "$dir"
-#cd "$dir"
+cp $APPDIR/bin/plugins.cfg $dir
+cd "$dir"
