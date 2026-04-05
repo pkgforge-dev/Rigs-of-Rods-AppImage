@@ -7,9 +7,11 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
-    libxaw \
-    openal \
-    patchelf
+    libxaw         \
+    openal         \
+    patchelf       \
+    pipewire-audio \
+    pipewire-jack
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
