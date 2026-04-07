@@ -9,7 +9,6 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     libxaw         \
     openal         \
-    patchelf       \
     pipewire-alsa  \
     pipewire-audio
 
