@@ -6,12 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-    libxaw         \
-    openal         \
-    npm            \
-    pipewire-alsa  \
-    pipewire-audio
+pacman -Syu --noconfirm libxaw openal npm pipewire-alsa pipewire-audio
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
