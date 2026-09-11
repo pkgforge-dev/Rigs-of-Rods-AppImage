@@ -15,7 +15,7 @@ export DEPLOY_PIPEWIRE=1
 export APPDIR="$PWD"/AppDir
 (
 	cd ./AppDir/bin
-	quick-sharun ./* /usr/lib/libXaw*.so*
+	quick-sharun ./* /usr/lib/libXaw*.so* /usr/lib/libopenal.so*
 )
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 # this app has problems with other locales breaking physics
